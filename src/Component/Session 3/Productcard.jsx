@@ -1,26 +1,28 @@
-import React from 'react'
 
-function Productcard(props) {
+import  propTypes from 'prop-types';
+
+function Productcard({ productName , price}) {
   return (
-    <div>
-        <div
+     <div
       style={{
-        border: "1px solid #ccc",
+        border: "2px solid black",
         padding: "15px",
+        width: "250px",
+        borderRadius: "10px",
+        backgroundColor: "#f4f4f4",
         margin: "10px",
-        borderRadius: "8px",
-        width: "200px",
-        textAlign: "center",
       }}
     >
-
-      <h3>{props.productName}</h3>
-      <p>Price: ₹{props.price}</p>
+      <h2>{productName}</h2>
+      <p>Price: ₹{price}</p>
     </div>
-    </div>
-  
-  )
+  );
 }
+
+// Productcard.propTypes = {
+//   productName: PropTypes.string,
+//   price: PropTypes.string,
+// };
 
 export default Productcard
 
