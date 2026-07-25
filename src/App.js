@@ -8,16 +8,78 @@ import Defaultuserprofile from './Component/Session 3/Defaultuserprofile';
 import Productcard from './Component/Session 3/Productcard';
 import Userprofile from './Component/Session 3/Userprofile';
 import Validation_productcard from './Component/Session 3/Validation_productcard';
-
+import Cartitem from './Component/Session 4/Cartitem';
+import Likebutton from './Component/Session 4/Likebutton';
+import Rating from './Component/Session 4/Rating';
+import Songvote from './Component/Session 4/Songvote';
+import LikeButton from './Component/Session 5/LikeButton';
+import LoginForm from './Component/Session 5/LoginForm';
+import PlaylistAdder from './Component/Session 5/PlaylistAdder';
+import RefactorLoginform from './Component/Session 5/RefactorLoginform';
+import SearchBar from './Component/Session 5/SearchBar';
+import CartSummary from './Component/Session 6/CartSummary';
+import FollowerList from './Component/Session 6/FollowerList';
+import OrderStatus from './Component/Session 6/Orderstatus';
+import Playlist from './Component/Session 6/Playlist';
+import IPLScoreFetcher from './Component/Session 7/IPLScoreFetcher';
+import MovieSuggestions from './Component/Session 7/MovieSuggestions';
+import TrendingSongs from './Component/Session 7/TrendingSongs';
+import UserData from './Component/Session 7/UserData';
+import AddToPlaylist from './Component/Session 8/AddToPlaylist';
+import FeedbackForm from './Component/Session 8/FeedbackForm';
+import Loginformusestate from './Component/Session 8/Loginformusestate';
+import SearchBar1 from './Component/Session 8/SearchBar1';
 
 function App() {
+
+  //session 6 : q-1
+  const songs = [
+    {
+      title: "Kesariya",
+      artist: "Arijit Singh",
+    },
+    {
+      title: "Tum Hi Ho",
+      artist: "Arijit Singh",
+    },
+    {
+      title: "Apna Bana Le",
+      artist: "Arijit Singh",
+    },
+    {
+      title: "Raataan Lambiyan",
+      artist: "Jubin Nautiyal",
+    },
+  ];
+
+  //session 6: q-3
+  const followers = ["Mamta", "Rahul", "Priya"];
+
+
+  //session 6: q-4
+   const cartItems = [
+    {
+      name: "Laptop",
+      price: 50000,
+    },
+    {
+      name: "Mouse",
+      price: 800,
+    },
+    {
+      name: "Keyboard",
+      price: 1500,
+    },
+  ];
+
+
   return (
     <div>
       {
 
         //<Task1 />
         // <Trendingsong />
-
+        //session 2--------------------------------------------------
         //<First />
 
         // <UserGreeting username="mamta" />
@@ -28,11 +90,11 @@ function App() {
         // <Miniprofile />
 
 
-        //session 3-------------------------------------------
+        //session 3----------------------------------------------------
 
-         <Productcard productName="Laptop" price={50000} />
+        //<Productcard productName="Laptop" price={50000} />
 
-         
+
         /* <Userprofile 
         username = "Mamta"
          followers="1200"
@@ -51,10 +113,46 @@ function App() {
           */
 
 
+
+        //session 4...............................................
+        //<Likebutton />
+        //<Cartitem />
+        //<Songvote/>
+        //<Rating/>
+
+
+        //Session 5-----------------------------------------------
+        //<LikeButton/>
+        // <SearchBar />
+        //<LoginForm/>
+        //<PlaylistAdder/>
+        // <RefactorLoginform/>
+
+        //Session 6-----------------------------------------------------
+
+        // <Playlist songs={songs} />
+        //<OrderStatus  isDelivered={true}/>
+        //<FollowerList followers={followers} />
+       // <CartSummary cartItems={cartItems} />
+
+
+       // Session 7--------------------------------------------
+       //<TrendingSongs />
+       //<IPLScoreFetcher />
+       //<MovieSuggestions />
+       //<UserData />
+
+
+
+
+       //Session 8--------------------------------------------------
+       //<SearchBar1 />
+       //<Loginformusestate />
+       //<AddToPlaylist />
+       <FeedbackForm />
       }
+
     </div>
-
-  );
+  )
 }
-
 export default App;
