@@ -1,3 +1,19 @@
+
+import { Routes, Route, Link, NavLink} from "react-router-dom";
+
+// session 9: 
+//  import Home from "./Component/Session 9/Home";
+//  import About from "./Component/Session 9/About";
+//  import Contact from "./Component/Session 9/Contact";
+  
+
+ import Homepage from "./Component/Session 9/Homepage";
+ import Dealspage from "./Component/Session 9/Dealspage";
+ import Cartpage from "./Component/Session 9/Cartpage";
+
+ import NotFound from "./Component/Session 9/NotFound";
+
+
 import Task1 from './Component/Session 1/Task1'
 import Trendingsong from './Component/Session 1/Trendingsong';
 import First from './Component/Session 2/First'
@@ -77,22 +93,22 @@ function App() {
     <div>
       {
 
-        //<Task1 />
-        // <Trendingsong />
-        //session 2--------------------------------------------------
+        // <Task1 />
+          // <Trendingsong />
+      
+
+        // session 2--------------------------------------------------
         //<First />
 
         // <UserGreeting username="mamta" />
         //<Usergreetingclass username="mamta chavda" />
-
-
-
         // <Miniprofile />
+      
 
 
         //session 3----------------------------------------------------
 
-        //<Productcard productName="Laptop" price={50000} />
+      //  <Productcard productName="Laptop" price={50000} /> */}
 
 
         /* <Userprofile 
@@ -142,17 +158,78 @@ function App() {
        //<MovieSuggestions />
        //<UserData />
 
-
-
-
-       //Session 8--------------------------------------------------
+    //  session 8--------------------------------------------------
        //<SearchBar1 />
        //<Loginformusestate />
        //<AddToPlaylist />
-       <FeedbackForm />
+       //<FeedbackForm />
+
+
       }
+  
+       //session 9------------------------------------------------------
+ <nav>
+   <Link to="/">Home</Link> |{" "}
+      <Link to="/deals">Deals</Link> |{" "}
+      <Link to="/cart">Cart</Link>   </nav>
+   <NavLink
+        to="/"
+        style={({ isActive }) => ({
+          color: isActive ? "red" : "green",
+          marginRight: "20px",
+          textDecoration: "none"
+        })}
+      >
+        Home
+      </NavLink>
+
+       <NavLink
+        to="/deals"
+        style={({ isActive }) => ({
+          color: isActive ? "red" : "green",
+          marginRight: "20px",
+          textDecoration: "none"
+        })}
+      >
+        Deals
+      </NavLink>
+
+        <NavLink
+        to="/cart"
+        style={({ isActive }) => ({
+          color: isActive ? "red" : "green",
+          textDecoration: "none"
+        })}
+      >
+        Cart
+      </NavLink>
+
+     
+       <Routes>
+
+       {/* <Route path="/" element={<Home />} />
+
+        <Route path="/about" element={<About />} />
+
+        <Route path="/contact" element={<Contact />} />
+        */}
+
+         
+      
+      <Route path="/" element={<Homepage />} />
+
+      <Route path="/deals" element={<Dealspage />} />
+
+      <Route path="/cart" element={<Cartpage />} />
+    
+    <Route path="*" element={<NotFound />} />
+
+       </Routes>
+
+
 
     </div>
   )
+
 }
 export default App;
