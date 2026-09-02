@@ -57,9 +57,9 @@ import MoviesList from "./React advanced/MoviesList";
 import PostCard from "./React advanced/PostCard";
 import SpotifyPlaylists from "./React advanced/SpotifyPlaylists";
 
-
-
-
+import ProductList from "./React advanced/session 6/ProductList";
+import PlaylistManager from "./React advanced/session 6/PlaylistManager";
+import ProductPerformance from "./React advanced/session 6/ProductPerformance";
 function App() {
 
   //session 6 : q-1
@@ -307,6 +307,22 @@ function App() {
     element={<SpotifyPlaylists />}
   />
 
+
+
+  <Route
+  path="/products"
+  element={<ProductList />}
+/>
+
+<Route
+  path="/playlist"
+  element={<PlaylistManager />}
+/>
+
+<Route
+  path="/performance"
+  element={<ProductPerformance />}
+/>
       </Routes>
 
 
