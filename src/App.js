@@ -51,6 +51,14 @@ import LikeCounter from './React advanced/LikeCounter';
 import LikeCounterDemo from './React advanced/LikeCounterDemo';
 import ContextRefactorDemo from './React advanced/ContextRefactor';
 import FlipkartProductList from "./React advanced/FlipkartProductList";
+import LiveClock from "./React advanced/LiveClock";
+import MoviesList from "./React advanced/MoviesList";
+
+import PostCard from "./React advanced/PostCard";
+import SpotifyPlaylists from "./React advanced/SpotifyPlaylists";
+
+
+
 
 function App() {
 
@@ -269,14 +277,34 @@ function App() {
         <Route path="/context-refactor" element={<ContextRefactorDemo />} />
 
         <Route path="*" element={<NotFound />} /> */}
-
-        <Route
-          path="/"
-          element={<FlipkartProductList />}
-        />
+       
             <Route
     path="/flipkartproductlist"
     element={<FlipkartProductList />}
+  />
+
+
+   <Route
+    path="/liveclock"
+    element={<LiveClock />}
+  />
+
+
+             <Route
+    path="/movies"
+    element={<MoviesList />}
+  />
+
+
+   <Route
+    path="/post"
+    element={<PostCard />}
+  />
+
+
+<Route
+    path="/spotify"
+    element={<SpotifyPlaylists />}
   />
 
       </Routes>
