@@ -1,0 +1,548 @@
+/* ==========================================================================
+   React Context Refactor Demo (React Advanced - Q3) Styles
+   ========================================================================== */
+
+.context-demo-container {
+  max-width: 1120px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(145deg, #090d16 0%, #111827 50%, #1e1b4b 100%);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.context-demo-container * {
+  box-sizing: border-box;
+}
+
+/* Header */
+.context-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.context-header .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4rem 1.1rem;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(129, 140, 248, 0.2));
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+}
+
+.context-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0.25rem 0 0.5rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.context-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.context-header code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  color: #38bdf8;
+  font-family: monospace;
+}
+
+/* Active User Switcher Bar */
+.user-switcher-bar {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.switcher-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.switcher-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.switcher-details h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-tag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.switcher-details p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.switcher-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.switcher-label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.btn-user-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-user-select img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-user-select:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-user-select.active {
+  background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+}
+
+/* Architecture Comparison Diagrams */
+.architecture-section {
+  margin-bottom: 3rem;
+}
+
+.section-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-subheading {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0 0 1.5rem 0;
+}
+
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .diagram-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diagram-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.diagram-card.problem {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+.diagram-card.solution {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: linear-gradient(145deg, rgba(34, 197, 94, 0.05) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+.diagram-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 0.35rem 0;
+}
+
+.diagram-card.problem .diagram-card-title {
+  color: #f87171;
+}
+
+.diagram-card.solution .diagram-card-title {
+  color: #4ade80;
+}
+
+.diagram-card-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0 0 1.25rem 0;
+}
+
+/* Tree Node Flow Visualization */
+.tree-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.tree-node {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tree-node .node-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f8fafc;
+}
+
+.tree-node .node-role {
+  font-size: 0.725rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.tree-node.source {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.15);
+}
+.tree-node.source .node-role {
+  background: rgba(56, 189, 248, 0.3);
+  color: #7dd3fc;
+}
+
+.tree-node.drilled {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.1);
+}
+.tree-node.drilled .node-role {
+  background: rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+}
+
+.tree-node.clean {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  opacity: 0.75;
+}
+.tree-node.clean .node-role {
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.tree-node.consumer {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+}
+.tree-node.consumer .node-role {
+  background: rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+
+.tree-arrow {
+  color: #64748b;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tree-arrow.drilled {
+  color: #f87171;
+  font-weight: 700;
+}
+
+.tree-arrow.direct {
+  color: #4ade80;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Refactored Component Tree Live Interactive Feed
+   ========================================================================== */
+.feed-showcase-section {
+  margin-bottom: 3rem;
+}
+
+.feed-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Post Component */
+.refactored-post-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.refactored-post-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.post-author-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-author-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.post-category-badge {
+  font-size: 0.725rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+.post-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.refactored-post-card:hover .post-image {
+  transform: scale(1.03);
+}
+
+.post-body {
+  padding: 1rem 1.1rem 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.post-caption {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Refactored LikeButton Component (Consumes useContext) */
+.refactored-like-section {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.like-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-context-like {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-context-like:hover {
+  transform: scale(1.05);
+  background: rgba(237, 73, 86, 0.15);
+  border-color: rgba(237, 73, 86, 0.4);
+  color: #ff6b81;
+}
+
+.btn-context-like.liked {
+  background: linear-gradient(135deg, #ff3040 0%, #dc2743 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(237, 73, 86, 0.4);
+}
+
+.like-count-display {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.like-count-display strong {
+  color: #ffffff;
+}
+
+/* Personalized User Interaction Badge */
+.liked-by-user-banner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.liked-by-user-banner img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+/* Code Comparison Tabs */
+.code-comparison-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2.5rem;
+}
+
+.code-tabs-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  padding: 0.5rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.tab-button.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}

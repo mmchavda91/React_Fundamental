@@ -1,17 +1,17 @@
 
-import { Routes, Route, Link, NavLink} from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 
 // session 9: 
 //  import Home from "./Component/Session 9/Home";
 //  import About from "./Component/Session 9/About";
 //  import Contact from "./Component/Session 9/Contact";
-  
 
- import Homepage from "./Component/Session 9/Homepage";
- import Dealspage from "./Component/Session 9/Dealspage";
- import Cartpage from "./Component/Session 9/Cartpage";
 
- import NotFound from "./Component/Session 9/NotFound";
+import Homepage from "./Component/Session 9/Homepage";
+import Dealspage from "./Component/Session 9/Dealspage";
+import Cartpage from "./Component/Session 9/Cartpage";
+
+import NotFound from "./Component/Session 9/NotFound";
 
 
 import Task1 from './Component/Session 1/Task1'
@@ -45,48 +45,54 @@ import AddToPlaylist from './Component/Session 8/AddToPlaylist';
 import FeedbackForm from './Component/Session 8/FeedbackForm';
 import Loginformusestate from './Component/Session 8/Loginformusestate';
 import SearchBar1 from './Component/Session 8/SearchBar1';
+import PlaylistCardDemo from './React advanced/PlaylistCardDemo';
+import PlaylistCard from './React advanced/PlaylistCard';
+import LikeCounter from './React advanced/LikeCounter';
+import LikeCounterDemo from './React advanced/LikeCounterDemo';
+import ContextRefactorDemo from './React advanced/ContextRefactor';
+import FlipkartProductList from "./React advanced/FlipkartProductList";
 
 function App() {
 
   //session 6 : q-1
-  const songs = [
-    {
-      title: "Kesariya",
-      artist: "Arijit Singh",
-    },
-    {
-      title: "Tum Hi Ho",
-      artist: "Arijit Singh",
-    },
-    {
-      title: "Apna Bana Le",
-      artist: "Arijit Singh",
-    },
-    {
-      title: "Raataan Lambiyan",
-      artist: "Jubin Nautiyal",
-    },
-  ];
+  // const songs = [
+  //   {
+  //     title: "Kesariya",
+  //     artist: "Arijit Singh",
+  //   },
+  //   {
+  //     title: "Tum Hi Ho",
+  //     artist: "Arijit Singh",
+  //   },
+  //   {
+  //     title: "Apna Bana Le",
+  //     artist: "Arijit Singh",
+  //   },
+  //   {
+  //     title: "Raataan Lambiyan",
+  //     artist: "Jubin Nautiyal",
+  //   },
+  // ];
 
-  //session 6: q-3
-  const followers = ["Mamta", "Rahul", "Priya"];
+  // //session 6: q-3
+  // const followers = ["Mamta", "Rahul", "Priya"];
 
 
-  //session 6: q-4
-   const cartItems = [
-    {
-      name: "Laptop",
-      price: 50000,
-    },
-    {
-      name: "Mouse",
-      price: 800,
-    },
-    {
-      name: "Keyboard",
-      price: 1500,
-    },
-  ];
+  // //session 6: q-4
+  // const cartItems = [
+  //   {
+  //     name: "Laptop",
+  //     price: 50000,
+  //   },
+  //   {
+  //     name: "Mouse",
+  //     price: 800,
+  //   },
+  //   {
+  //     name: "Keyboard",
+  //     price: 1500,
+  //   },
+  // ];
 
 
   return (
@@ -94,8 +100,8 @@ function App() {
       {
 
         // <Task1 />
-          // <Trendingsong />
-      
+        // <Trendingsong />
+
 
         // session 2--------------------------------------------------
         //<First />
@@ -103,12 +109,12 @@ function App() {
         // <UserGreeting username="mamta" />
         //<Usergreetingclass username="mamta chavda" />
         // <Miniprofile />
-      
+
 
 
         //session 3----------------------------------------------------
 
-      //  <Productcard productName="Laptop" price={50000} /> */}
+        //  <Productcard productName="Laptop" price={50000} /> */}
 
 
         /* <Userprofile 
@@ -149,30 +155,41 @@ function App() {
         // <Playlist songs={songs} />
         //<OrderStatus  isDelivered={true}/>
         //<FollowerList followers={followers} />
-       // <CartSummary cartItems={cartItems} />
+        // <CartSummary cartItems={cartItems} />
 
 
-       // Session 7--------------------------------------------
-       //<TrendingSongs />
-       //<IPLScoreFetcher />
-       //<MovieSuggestions />
-       //<UserData />
+        // Session 7--------------------------------------------
+        //<TrendingSongs />
+        //<IPLScoreFetcher />
+        //<MovieSuggestions />
+        //<UserData />
 
-    //  session 8--------------------------------------------------
-       //<SearchBar1 />
-       //<Loginformusestate />
-       //<AddToPlaylist />
-       //<FeedbackForm />
+        //  session 8--------------------------------------------------
+        //<SearchBar1 />
+        //<Loginformusestate />
+        //<AddToPlaylist />
+        //<FeedbackForm />
 
+        //  React Advanced - Q1----------------------------------------
+        //  <PlaylistCardDemo />
+
+        //  React Advanced - Q1----------------------------------------
+        //  <PlaylistCardDemo />
+
+        //  React Advanced - Q2----------------------------------------
+        //  <LikeCounterDemo />
+
+        //  React Advanced - Q3 (Context Refactor)--------------------
+        // <ContextRefactorDemo />
 
       }
-  
-       //session 9------------------------------------------------------
- <nav>
-   <Link to="/">Home</Link> |{" "}
-      <Link to="/deals">Deals</Link> |{" "}
-      <Link to="/cart">Cart</Link>   </nav>
-   <NavLink
+
+      {/* session 9------------------------------------------------------ */}
+      {/* <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/deals">Deals</Link> |{" "}
+        <Link to="/cart">Cart</Link>   </nav>
+      <NavLink
         to="/"
         style={({ isActive }) => ({
           color: isActive ? "red" : "green",
@@ -183,7 +200,7 @@ function App() {
         Home
       </NavLink>
 
-       <NavLink
+      <NavLink
         to="/deals"
         style={({ isActive }) => ({
           color: isActive ? "red" : "green",
@@ -192,39 +209,77 @@ function App() {
         })}
       >
         Deals
-      </NavLink>
+      </NavLink> */}
 
-        <NavLink
-        to="/cart"
+      {/* <NavLink
+        to="/playlist"
         style={({ isActive }) => ({
           color: isActive ? "red" : "green",
+          marginLeft: "20px",
           textDecoration: "none"
         })}
       >
-        Cart
+        Playlist (Q-1)
       </NavLink>
 
-     
-       <Routes>
+      <NavLink
+        to="/like-counter"
+        style={({ isActive }) => ({
+          color: isActive ? "red" : "green",
+          marginLeft: "20px",
+          textDecoration: "none"
+        })}
+      >
+        Like Counter (Q-2)
+      </NavLink>
 
-       {/* <Route path="/" element={<Home />} />
+      <NavLink
+        to="/context-refactor"
+        style={({ isActive }) => ({
+          color: isActive ? "red" : "green",
+          marginLeft: "20px",
+          textDecoration: "none"
+        })}
+      >
+        Context Refactor (Q-3)
+      </NavLink> */}
+
+
+      <Routes>
+
+        {/* <Route path="/" element={<Home />} />
 
         <Route path="/about" element={<About />} />
 
         <Route path="/contact" element={<Contact />} />
         */}
 
-         
-      
-      <Route path="/" element={<Homepage />} />
 
-      <Route path="/deals" element={<Dealspage />} />
+        {/* 
+        <Route path="/" element={<Homepage />} />
 
-      <Route path="/cart" element={<Cartpage />} />
-    
-    <Route path="*" element={<NotFound />} />
+        <Route path="/deals" element={<Dealspage />} />
 
-       </Routes>
+        <Route path="/cart" element={<Cartpage />} /> */}
+
+        {/* <Route path="/playlist" element={<PlaylistCardDemo />} />
+
+        <Route path="/like-counter" element={<LikeCounterDemo />} />
+
+        <Route path="/context-refactor" element={<ContextRefactorDemo />} />
+
+        <Route path="*" element={<NotFound />} /> */}
+
+        <Route
+          path="/"
+          element={<FlipkartProductList />}
+        />
+            <Route
+    path="/flipkartproductlist"
+    element={<FlipkartProductList />}
+  />
+
+      </Routes>
 
 
 
