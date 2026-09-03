@@ -61,6 +61,12 @@ import ProductList from "./React advanced/session 6/ProductList";
 import PlaylistManager from "./React advanced/session 6/PlaylistManager";
 import ProductPerformance from "./React advanced/session 6/ProductPerformance";
 import MovieSearch from "./React advanced/Session 3/MovieSearch";
+import PlaylistCounter from "./React advanced/session 4/PlaylistCounter";
+
+import cartitem from "./React advanced/session 4/Counter";
+
+
+
 function App() {
 
   //session 6 : q-1
@@ -254,6 +260,7 @@ function App() {
       </NavLink> */}
 
 
+  <PlaylistCounter />
       <Routes>
 
         {/* <Route path="/" element={<Home />} />
@@ -315,25 +322,27 @@ function App() {
   element={<ProductList />}
 />
 
-<Route
+{/* <Route
   path="/playlist"
   element={<PlaylistManager />}
-/>
+/> */}
 
-<Route
+{/* <Route
   path="/performance"
   element={<ProductPerformance />}
-/>
+/> */}
 
 
 
-  <Route
+  {/* <Route
   path="/"
   element={<MovieSearch />}
-/>
+/> */}
       </Routes>
 
+ 
 
+ <Cartitem />
 
     </div>
   )
