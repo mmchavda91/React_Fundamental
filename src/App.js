@@ -60,6 +60,7 @@ import SpotifyPlaylists from "./React advanced/SpotifyPlaylists";
 import ProductList from "./React advanced/session 6/ProductList";
 import PlaylistManager from "./React advanced/session 6/PlaylistManager";
 import ProductPerformance from "./React advanced/session 6/ProductPerformance";
+import MovieSearch from "./React advanced/Session 3/MovieSearch";
 function App() {
 
   //session 6 : q-1
@@ -322,6 +323,13 @@ function App() {
 <Route
   path="/performance"
   element={<ProductPerformance />}
+/>
+
+
+
+  <Route
+  path="/"
+  element={<MovieSearch />}
 />
       </Routes>
 
