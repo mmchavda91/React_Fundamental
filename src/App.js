@@ -65,7 +65,7 @@ import PlaylistCounter from "./React advanced/session 4/PlaylistCounter";
 
 import cartitem from "./React advanced/session 4/Counter";
 
-
+import PlaylistReducer from "./React advanced/session 5/PlaylistReducer";
 
 function App() {
 
@@ -343,6 +343,9 @@ function App() {
  
 
  <Cartitem />
+
+
+ <PlaylistManager />
 
     </div>
   )
