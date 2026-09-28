@@ -66,6 +66,9 @@ import PlaylistCounter from "./React advanced/session 4/PlaylistCounter";
 import cartitem from "./React advanced/session 4/Counter";
 
 import PlaylistReducer from "./React advanced/session 5/PlaylistReducer";
+import InstaThemeDemo from "./React advanced/session 7/InstaThemeDemo";
+import ThemeNestedDemo from "./React advanced/session 7/ThemeNestedDemo";
+import PropDrillingRefactor from "./React advanced/session 7/PropDrillingRefactor";
 
 function App() {
 
@@ -322,6 +325,31 @@ function App() {
   element={<ProductList />}
 />
 
+<Route
+  path="/instatheme"
+  element={<InstaThemeDemo />}
+/>
+
+<Route
+  path="/session7-q1"
+  element={<InstaThemeDemo />}
+/>
+
+<Route
+  path="/session7-q2"
+  element={<ThemeNestedDemo />}
+/>
+
+<Route
+  path="/session7-q3"
+  element={<ThemeNestedDemo />}
+/>
+
+<Route
+  path="/session7-q4"
+  element={<PropDrillingRefactor />}
+/>
+
 {/* <Route
   path="/playlist"
   element={<PlaylistManager />}
@@ -346,6 +374,15 @@ function App() {
 
 
  <PlaylistManager />
+
+ {/* React Advanced - Session 7: Question 1 */}
+ <InstaThemeDemo />
+
+ {/* React Advanced - Session 7: Question 2 & 3 */}
+ <ThemeNestedDemo />
+
+ {/* React Advanced - Session 7: Question 4 (No Prop Drilling Refactor) */}
+ <PropDrillingRefactor />
 
     </div>
   )
