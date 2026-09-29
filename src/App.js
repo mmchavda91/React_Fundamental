@@ -69,6 +69,8 @@ import PlaylistReducer from "./React advanced/session 5/PlaylistReducer";
 import InstaThemeDemo from "./React advanced/session 7/InstaThemeDemo";
 import ThemeNestedDemo from "./React advanced/session 7/ThemeNestedDemo";
 import PropDrillingRefactor from "./React advanced/session 7/PropDrillingRefactor";
+import UserContextDemo from "./Component/session 10/UserContextDemo";
+import TrendingMovies from "./Component/Session 11/TrendingMovies";
 
 function App() {
 
@@ -350,6 +352,16 @@ function App() {
   element={<PropDrillingRefactor />}
 />
 
+<Route
+  path="/Session10"
+  element={<UserContextDemo />}
+/>
+
+<Route
+  path="/session11"
+  element={<TrendingMovies />}
+/>
+
 {/* <Route
   path="/playlist"
   element={<PlaylistManager />}
@@ -383,6 +395,12 @@ function App() {
 
  {/* React Advanced - Session 7: Question 4 (No Prop Drilling Refactor) */}
  <PropDrillingRefactor />
+
+ {/* React - Session 10: Context API (UserContext & Navbar) */}
+ <UserContextDemo />
+
+ {/* React - Session 11: Question 1 (Axios Trending Movies) */}
+ <TrendingMovies />
 
     </div>
   )
