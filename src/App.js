@@ -45,6 +45,8 @@ import AddToPlaylist from './Component/Session 8/AddToPlaylist';
 import FeedbackForm from './Component/Session 8/FeedbackForm';
 import Loginformusestate from './Component/Session 8/Loginformusestate';
 import SearchBar1 from './Component/Session 8/SearchBar1';
+import Session8ThemeDemo from './Component/Session 8/ThemeReducerDemo';
+import RestaurantFavorites from './Component/Session 8/RestaurantFavorites';
 import PlaylistCardDemo from './React advanced/PlaylistCardDemo';
 import PlaylistCard from './React advanced/PlaylistCard';
 import LikeCounter from './React advanced/LikeCounter';
@@ -67,10 +69,20 @@ import cartitem from "./React advanced/session 4/Counter";
 
 import PlaylistReducer from "./React advanced/session 5/PlaylistReducer";
 import InstaThemeDemo from "./React advanced/session 7/InstaThemeDemo";
+import ThemeReducerDemo from "./React advanced/session 7/ThemeReducerDemo";
 import ThemeNestedDemo from "./React advanced/session 7/ThemeNestedDemo";
 import PropDrillingRefactor from "./React advanced/session 7/PropDrillingRefactor";
 import UserContextDemo from "./Component/session 10/UserContextDemo";
 import TrendingMovies from "./Component/Session 11/TrendingMovies";
+
+// Session 12 imports
+import TrendingSongs12 from "./Component/Session 12/TrendingSongs";
+import IPLScores from "./Component/Session 12/IPLScores";
+import FetchFix from "./Component/Session 12/FetchFix";
+
+// Session 13 imports
+import BuildInfo from "./Component/Session 13/BuildInfo";
+import NetlifyDeploy from "./Component/Session 13/NetlifyDeploy";
 
 function App() {
 
@@ -338,6 +350,21 @@ function App() {
 />
 
 <Route
+  path="/theme-reducer"
+  element={<ThemeReducerDemo />}
+/>
+
+<Route
+  path="/session8-theme"
+  element={<Session8ThemeDemo />}
+/>
+
+<Route
+  path="/session8-favorites"
+  element={<RestaurantFavorites />}
+/>
+
+<Route
   path="/session7-q2"
   element={<ThemeNestedDemo />}
 />
@@ -374,10 +401,8 @@ function App() {
 
 
 
-  {/* <Route
-  path="/"
-  element={<MovieSearch />}
-/> */}
+
+        <Route path="*" element={null} />
       </Routes>
 
  
@@ -390,6 +415,15 @@ function App() {
  {/* React Advanced - Session 7: Question 1 */}
  <InstaThemeDemo />
 
+ {/* React Advanced: ThemeContext with useReducer */}
+ <ThemeReducerDemo />
+
+ {/* Session 8: ThemeContext with useReducer */}
+ <Session8ThemeDemo />
+
+ {/* Session 8: Nested User and Favorites Contexts */}
+ <RestaurantFavorites />
+
  {/* React Advanced - Session 7: Question 2 & 3 */}
  <ThemeNestedDemo />
 
@@ -401,6 +435,21 @@ function App() {
 
  {/* React - Session 11: Question 1 (Axios Trending Movies) */}
  <TrendingMovies />
+
+ {/* React - Session 12: Question 1 (TrendingSongs - fetch + error) */}
+ <TrendingSongs12 />
+
+ {/* React - Session 12: Question 3 (IPLScores - /users API) */}
+ <IPLScores />
+
+ {/* React - Session 12: Question 4 (FetchFix - buggy vs fixed) */}
+ <FetchFix />
+
+ {/* React - Session 13: Question 1 (npm run build verification) */}
+ <BuildInfo />
+
+ {/* React - Session 13: Question 2 (Netlify Deployment Guide) */}
+ <NetlifyDeploy />
 
     </div>
   )
