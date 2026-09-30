@@ -84,6 +84,27 @@ import FetchFix from "./Component/Session 12/FetchFix";
 import BuildInfo from "./Component/Session 13/BuildInfo";
 import NetlifyDeploy from "./Component/Session 13/NetlifyDeploy";
 
+// New Session 8 imports
+import ThemeApp from './React advanced/Session 8/ThemeApp';
+import ZomatoApp from './React advanced/Session 8/ZomatoApp';
+import SpotifyApp from './React advanced/Session 8/SpotifyApp';
+import InstagramApp from './React advanced/Session 8/InstagramApp';
+import CartApp from './React advanced/Session 8/CartApp';
+
+// Session 9 Firebase initialization check
+import firebaseApp from './React advanced/Session 9/firebase';
+import SignUp from './React advanced/Session 10/SignUp';
+import Login from './React advanced/Session 10/Login';
+import Logout from './React advanced/Session 10/Logout';
+import AuthStatus from './React advanced/Session 10/AuthStatus';
+import Session11Navbar from './React advanced/Session 11/Navbar';
+import PrivateRoute from './React advanced/Session 11/PrivateRoute';
+import ProfilePage from './React advanced/Session 11/ProfilePage';
+import MyOrdersPage from './React advanced/Session 11/MyOrdersPage';
+import LoginPage from './React advanced/Session 11/LoginPage';
+
+console.log("Firebase App Initialized successfully: ", firebaseApp);
+
 function App() {
 
   //session 6 : q-1
@@ -129,6 +150,8 @@ function App() {
 
   return (
     <div>
+      <Session11Navbar />
+      <AuthStatus />
       {
 
         // <Task1 />
@@ -403,6 +426,25 @@ function App() {
 
 
         <Route path="*" element={null} />
+
+        {/* Session 11: Protected Routes */}
+        <Route path="/session11-login" element={<LoginPage />} />
+        <Route
+          path="/session11-profile"
+          element={
+            <PrivateRoute>
+              <ProfilePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/session11-myorders"
+          element={
+            <PrivateRoute>
+              <MyOrdersPage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
 
  
@@ -450,6 +492,27 @@ function App() {
 
  {/* React - Session 13: Question 2 (Netlify Deployment Guide) */}
  <NetlifyDeploy />
+
+ {/* ------------------ NEW SESSION 8 COMPONENTS ------------------ */}
+ <hr /><h2>1. Theme App</h2>
+ <ThemeApp />
+ 
+ <hr /><h2>2. Zomato App</h2>
+ <ZomatoApp />
+ 
+ <hr /><h2>3. Spotify App</h2>
+ <SpotifyApp />
+ 
+ <hr /><h2>4. Instagram App</h2>
+ <InstagramApp />
+ 
+ <hr /><h2>5. Cart App</h2>
+ <CartApp />
+ {/* -------------------------------------------------------------- */}
+ <hr /><h2>6. Firebase Authentication (Session 10)</h2>
+ <SignUp />
+ <Login />
+ <Logout />
 
     </div>
   )

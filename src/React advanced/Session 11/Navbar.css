@@ -1,0 +1,100 @@
+/* Spotify-style Navbar */
+.spotify-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: #121212;
+  color: white;
+  font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.spotify-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1DB954;
+  letter-spacing: 1px;
+}
+
+/* Right section */
+.spotify-user-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* User avatar circle */
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #1DB954;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Greeting text */
+.greeting-text {
+  font-size: 15px;
+  color: #b3b3b3;
+}
+
+.greeting-text strong {
+  color: #ffffff;
+}
+
+/* Sign In button - shown when logged OUT */
+.signin-btn {
+  padding: 8px 24px;
+  background-color: #1DB954;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.signin-btn:hover {
+  background-color: #1ed760;
+  transform: scale(1.04);
+}
+
+/* Log Out button - shown when logged IN */
+.logout-btn {
+  padding: 8px 20px;
+  background-color: transparent;
+  color: #b3b3b3;
+  border: 1px solid #535353;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}

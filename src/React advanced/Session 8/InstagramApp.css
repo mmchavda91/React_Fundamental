@@ -1,0 +1,164 @@
+.insta-app-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+.insta-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.insta-navbar .brand {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-text {
+  font-size: 14px;
+  color: #262626;
+}
+
+.logout-btn {
+  background: transparent;
+  color: #0095f6;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.insta-main {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.login-container {
+  background: white;
+  padding: 60px 40px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.login-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.login-btn:hover {
+  background-color: #1877f2;
+}
+
+.profile-container {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px #dbdbdb;
+}
+
+.profile-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 400;
+  color: #262626;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.edit-profile-section {
+  border-top: 1px solid #dbdbdb;
+  padding-top: 30px;
+}
+
+.edit-profile-section h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #262626;
+  font-size: 16px;
+}
+
+.edit-form {
+  display: flex;
+  gap: 15px;
+}
+
+.edit-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-size: 14px;
+}
+
+.edit-form input:focus {
+  outline: none;
+  border-color: #a8a8a8;
+}
+
+.update-btn {
+  background-color: #efefef;
+  color: #262626;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.update-btn:hover {
+  background-color: #dbdbdb;
+}

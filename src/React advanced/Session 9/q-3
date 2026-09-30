@@ -1,0 +1,5 @@
+4.
+Write a short explanation (3-4 lines) of how using Firebase as a backend service benefits front-end developers
+ building apps like Instagram or Zomato.
+
+ Why Firebase is beneficial for Front-end Developers: Firebase provides front-end developers with ready-to-use cloud services like real-time databases, secure user authentication, and file storage without the need to set up servers or write complex backend APIs. This allows developers to focus entirely on building a great User Interface (UI). For dynamic apps like Instagram (photo uploads, real-time likes) or Zomato (live order tracking), Firebase enables rapid development and effortless scalability out of the box.

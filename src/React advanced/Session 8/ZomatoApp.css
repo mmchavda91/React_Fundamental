@@ -1,0 +1,99 @@
+.zomato-app-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.zomato-navbar {
+  background-color: #e23744;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.zomato-navbar .brand {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.zomato-navbar .user-info {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.zomato-content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.zomato-content h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.restaurant-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.restaurant-card h3 {
+  margin: 0 0 10px 0;
+  color: #1c1c1c;
+  font-size: 20px;
+}
+
+.restaurant-card p {
+  margin: 5px 0;
+  color: #696969;
+  font-size: 15px;
+}
+
+.fav-btn {
+  margin-top: auto;
+  padding: 12px;
+  border: 1px solid #e23744;
+  border-radius: 6px;
+  background: white;
+  color: #e23744;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fav-btn.active {
+  background: #e23744;
+  color: white;
+}
+
+.fav-btn:hover {
+  background: #fce4e4;
+}
+
+.fav-btn.active:hover {
+  background: #d12734;
+}
