@@ -47,17 +47,17 @@ import Loginformusestate from './Component/Session 8/Loginformusestate';
 import SearchBar1 from './Component/Session 8/SearchBar1';
 import Session8ThemeDemo from './Component/Session 8/ThemeReducerDemo';
 import RestaurantFavorites from './Component/Session 8/RestaurantFavorites';
-import PlaylistCardDemo from './React advanced/PlaylistCardDemo';
-import PlaylistCard from './React advanced/PlaylistCard';
-import LikeCounter from './React advanced/LikeCounter';
-import LikeCounterDemo from './React advanced/LikeCounterDemo';
-import ContextRefactorDemo from './React advanced/ContextRefactor';
-import FlipkartProductList from "./React advanced/FlipkartProductList";
-import LiveClock from "./React advanced/LiveClock";
-import MoviesList from "./React advanced/MoviesList";
+import PlaylistCardDemo from './React advanced/Session 1/PlaylistCardDemo';
+import PlaylistCard from './React advanced/Session 1/PlaylistCard';
+import LikeCounter from './React advanced/Session 1/LikeCounter';
+import LikeCounterDemo from './React advanced/Session 1/LikeCounterDemo';
+import ContextRefactorDemo from './React advanced/Session 1/ContextRefactor';
+import FlipkartProductList from "./React advanced/Session 2/FlipkartProductList";
+import LiveClock from "./React advanced/Session 2/LiveClock";
+import MoviesList from "./React advanced/Session 2/MoviesList";
 
-import PostCard from "./React advanced/PostCard";
-import SpotifyPlaylists from "./React advanced/SpotifyPlaylists";
+import PostCard from "./React advanced/Session 2/PostCard";
+import SpotifyPlaylists from "./React advanced/Session 2/SpotifyPlaylists";
 
 import ProductList from "./React advanced/session 6/ProductList";
 import PlaylistManager from "./React advanced/session 6/PlaylistManager";
@@ -102,6 +102,31 @@ import PrivateRoute from './React advanced/Session 11/PrivateRoute';
 import ProfilePage from './React advanced/Session 11/ProfilePage';
 import MyOrdersPage from './React advanced/Session 11/MyOrdersPage';
 import LoginPage from './React advanced/Session 11/LoginPage';
+import FirestoreSetupTest from './React advanced/Session 12/FirestoreSetupTest';
+import AddRestaurant from './React advanced/Session 12/AddRestaurant';
+import PlaylistEditor from './React advanced/Session 13/PlaylistEditor';
+import LiveCommentsFeed from './React advanced/Session 13/LiveCommentsFeed';
+import PlaylistManagerRedux from './React advanced/Session 14/PlaylistManager';
+import PlaylistToolkit from './React advanced/Session 15/Playlist';
+import ShoppingCartToolkit from './React advanced/Session 15/ShoppingCart';
+import RestaurantList from './React advanced/Session 16/RestaurantList';
+import LoginFormik from './React advanced/Session 17/LoginFormik';
+import PlaylistFormik from './React advanced/Session 17/PlaylistFormik';
+
+// Session 19 imports
+import S19LoginForm from './React advanced/Session 19/LoginForm';
+import PlaylistList from './React advanced/Session 19/PlaylistList';
+
+// Session 18 imports
+import EnvDemo from './React advanced/Session 18/EnvDemo';
+
+// Session 20 imports (lazy-loaded for code splitting demo)
+import React, { Suspense, lazy } from 'react';
+const Session20App = lazy(() => import('./React advanced/Session 20/Session20App'));
+
+
+
+
 
 console.log("Firebase App Initialized successfully: ", firebaseApp);
 
@@ -513,6 +538,35 @@ function App() {
  <SignUp />
  <Login />
  <Logout />
+ <hr /><h2>7. Firestore Setup (Session 12 - Q1)</h2>
+ <FirestoreSetupTest />
+ <hr /><h2>8. Add Restaurant to Firestore (Session 12 - Q2)</h2>
+ <AddRestaurant />
+ <hr /><h2>9. Playlist Editor (Session 13 - Q1, Q2)</h2>
+ <PlaylistEditor />
+ <hr /><h2>10. Live Comments Feed (Session 13 - Q3, Q4, Q5)</h2>
+ <LiveCommentsFeed />
+ <hr /><h2>11. Redux Playlist Manager (Session 14)</h2>
+ <PlaylistManagerRedux />
+ <hr /><h2>12. Redux Toolkit Playlist & Shopping Cart (Session 15)</h2>
+ <PlaylistToolkit />
+ <ShoppingCartToolkit />
+ <hr /><h2>13. Redux Thunk API Fetching (Session 16)</h2>
+ <RestaurantList />
+ <hr /><h2>14. Formik & Yup (Session 17)</h2>
+ <LoginFormik />
+ <PlaylistFormik />
+ <hr /><h2>15. Environment Variables (Session 18)</h2>
+ <EnvDemo />
+
+ <hr /><h2>16. Redux Toolkit - PlaylistManager (Session 19)</h2>
+ <S19LoginForm />
+ <PlaylistList />
+
+ <hr /><h2>17. Deploy, Test & Optimize - Movie Watchlist (Session 20)</h2>
+ <Suspense fallback={<div style={{textAlign:'center',padding:'40px',color:'#6366f1'}}>⏳ Loading Session 20...</div>}>
+   <Session20App />
+ </Suspense>
 
     </div>
   )
